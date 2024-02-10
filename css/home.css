@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient( to bottom , #2c1b5a ,#050012);
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-content{
+    width: 100vw;
+    height: 100vh;
+    
+}

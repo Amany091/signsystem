@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/signup.css" />
+    <link rel="stylesheet" href="css/media.css">
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="signup ">
+      <div
+        style="background-color: rgba(0, 0, 0, 0.3)"
+        class="text-light rounded px-2 py-2 shadow w-75 h-75 d-flex flex-column align-items-center my-5 mx-auto"
+      >
+        <h5 class="fw-bold text-center  mt-5">
+          SIGN UP TO OUR PLATFORM!
+        </h5>
+        <form action="./signin.html">
+          <div class="usernameContent">
+            <div class="d-flex flex-column">
+              <label for="Username" class="form-label" id="username"
+                >Username</label
+              >
+              <input
+                oninput="validateUsername(this.value)"
+                type="text"
+                name="userName"
+                id="Username"
+                class="form-control"
+              />
+            </div>
+            <div
+              class="usernameRule invalid-name rule d-none text-danger fw-bold text-center py-2"
+            >
+              <p>
+                Name must be at least 3 characters long and no more than 10.
+              </p>
+            </div>
+            <div class="valid-name correctIcon d-none text-end">
+              <i class="bx bx-check text-success fs-3 fw-bold"></i>
+            </div>
+          </div>
+
+          <div class="emailContent">
+            <div class="d-flex flex-column">
+              <label for="Email" class="form-label" id="email">Email</label>
+              <input
+                oninput="validateEmail(this.value)"
+                type="email"
+                class="form-control"
+                id="Email"
+              />
+            </div>
+            <div
+              class="emailRule invalid-email rule d-none text-danger fs-6 fw-bold text-center py-2"
+            >
+              Email must include @gmail.com
+            </div>
+            <div class="valid-email correctIcon d-none text-end">
+              <i class="bx bx-check mt-1 text-success fw-bold fs-3"></i>
+            </div>
+          </div>
+
+          <div class="passwordContent">
+            <div class="d-flex flex-column">
+              <label for="Password" id="password" class="form-label"
+                >Password</label
+              >
+              <input
+                oninput="validatePassword(this.value)"
+                type="password"
+                name="password"
+                id="Password"
+                class="form-control"
+              />
+            </div>
+            <div
+              class="passwordRule invalid-password rule d-none text-danger fw-bold text-center py-2"
+            >
+              Password should be at least 8 characters long, containing at least
+              one lowercase letter, one uppercase letter, and one digit:
+            </div>
+            <div class="valid-password correctIcon d-none text-end">
+              <i class="bx bx-check mt-1 text-success fw-bold fs-3"></i>
+            </div>
+          </div>
+
+          <div class="showpassword">
+            <input
+              type="checkbox"
+              onclick="showPass()"
+              id="showpass"
+              aria-checked="false"
+            />
+            <label for="showpass" class="form-label">Show Password</label>
+          </div>
+          <button
+            type="submit"
+            id="signup"
+            onclick="addUser()"
+            class="mx-auto my-5"
+          >
+            Sign Up
+          </button>
+          <p class="text-center mt-3">
+            Already have an account? <a href="./signin.html">Login</a>
+          </p>
+        </form>
+      </div>
+      <div class="successfulAdd hide text-light text-center fw-bold ">
+        <i class="bx bx-check text-success"></i>
+        <p class="my-3">User Added Successfully</p>
+        <button class="btn btn-light" onclick="window.location.href='./signin.html'" style="color: #491fbc;" >Log In</button>
+        <i class="bx bx-exit text-danger"></i>
+      </div>
+      <div class="userExisitingAlert w-75 p-5">
+        <h6 class="text-light">User Is Already Exist , Try Again With  Different Email!</h6>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/signup.js"></script>
+  </body>
+</html>

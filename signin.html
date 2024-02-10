@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="signin ">
+        <h1>Login Form</h1>
+      <form action="" method="post" accept-charset="utf-8">
+        <div class="item my-3">
+            <label for="userEmail" class="form-label userEmail ">Email</label>
+          <input class="" id="userEmail" type="email" required />
+        </div>
+        <div class="item mb-3">
+            <label for="userPassword" class="form-label userPassword">Password</label>
+          <input  id="userPassword" class="" type="password" required />
+        </div>
+        <div class="showPass d-flex align-items-baseline ">
+            <input  type="checkbox" id="show">
+            <label for="show" class=" mx-3 ">Show Password</label>
+        </div>
+        <button class="btn btn-primary  ">Login</button>
+
+        <p class="text text-center">Don't have an account? <a href="#" onclick="window.location.href = './signup.html' " >Register</a></p>
+      </form>
+    </div>
+    </div>
+    <script src="js/signin.js"></script>
+</body>
+</html>

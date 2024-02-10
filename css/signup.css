@@ -1,0 +1,133 @@
+:root{
+    --main-color: #2c1b5a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient( to bottom , var(--main-color) ,#050012);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.signup{
+    width: 100vw;
+}
+form {
+    width: 65%;
+    height: 78%;
+    margin: auto;
+    padding: 10px;
+}
+form label {
+    
+    margin: 10px 0px;
+    font-weight: 700;
+}
+
+form input {
+    font-size: 18px;
+    border-image: linear-gradient( rgba(0,0, blue, .5), olive , rgba(0.0,0,.5) ) 1;
+}
+
+form input:focus{
+    outline: none;
+    border: 2px solid transparent;
+}
+
+
+button {
+    padding: .5rem 2rem;
+    display: block;
+    border: none;
+    background-color: var(--main-color);
+    transition: background-color .3s ease;
+    color:  white;
+    width: 50%;
+}
+
+button:hover {
+    background-color: #491fbc;
+    
+}
+
+form p a {
+    color: #5b23f3;
+}
+
+.successfulAdd{
+    background-color: var(--main-color);
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+    animation: 2s ease-in 1s show;
+}
+.successfulAdd .bx-check{
+    font-size: 55px;
+    margin-top: 40px;
+}
+
+.successfulAdd button {
+    margin: 30px 0;
+}
+.hide {
+    opacity: 0;
+    display: none;
+}
+
+.show {
+    opacity: 1;
+    display: block;
+}
+/* @keyframes hide { 0% { opacity: 1;  } 100% { opacity: 0 ; display: none;  } } */
+
+@keyframes show { 0% { opacity: 0; } 100% { opacity: 1; display: block; } }
+
+.userExisitingAlert{
+    display: none;
+    background-color: var(--main-color);
+    animation: 1s ease-in 1s alternate userExist , 5s ease-in 3s alternate backAni  ;
+    position: absolute;
+    bottom: 50%;
+    left: 100%;
+}
+
+.bx-exit {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: x-large;
+    cursor: pointer;
+}
+@keyframes userExist {
+    from{
+        left: 100%;
+        opacity: .5;
+    }
+    to{
+       left: 30%;
+       opacity: 1;
+    }
+    
+}
+
+@keyframes backAni {
+    from {
+        left: 30%;
+        opacity: 1;
+    }
+    to{
+        left: 100%;
+        opacity: .5;
+    }
+}
+
