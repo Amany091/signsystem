@@ -42,7 +42,7 @@ signinBtn.addEventListener("click", (e) => {
     if (userList[i].email === userEmail.value && userList[i].password === userPassword.value) {
       let name = userList[i].username;
       localStorage.setItem("username", name);
-      location.href = "../home.html";
+      location.href = "./home.html" ;
       clearForm();
     } else {
         alert("Invalid email or password!");
